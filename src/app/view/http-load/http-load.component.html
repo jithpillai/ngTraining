@@ -1,0 +1,21 @@
+<div [style.background-color]="bgColor" class="m-3"> 
+
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Body</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor = "let user of webDetails; let i = index">
+              <th scope="row">{{user.id}}</th>
+              <td>{{ user.title }}</td>
+              <td>{{ user.body }}</td>
+            </tr>
+      </tbody>
+    
+  </table>
+  
+</div>

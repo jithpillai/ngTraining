@@ -1,0 +1,17 @@
+<div *ngIf="showDetails" appChangeColor [style.background-color]="bgColor" [style.display]="'block'" class="card card-primary m-3">
+    <div class="card-header h3">User Info</div>
+  <div class="card-body">
+        <label class="control-label col-sm-3">Name :</label><label class="col-sm-8 font-weight-bold">{{user.name | initcap}}</label>
+        <label class="control-label col-sm-3">Age :</label><label class="col-sm-8 font-weight-bold">{{user.age}}</label>
+        <label class="control-label col-sm-3">User Name :</label><label class="col-sm-8 font-weight-bold">{{user.userName}}</label>
+        <label class="control-label col-sm-3">Nationality :</label><label class="col-sm-8 font-weight-bold">{{user.nation}}</label>
+        <label class="control-label col-sm-3">City :</label><label class="col-sm-8 font-weight-bold">{{user.address.city}}</label>
+        <label class="control-label col-sm-3">Pin Code :</label><label class="col-sm-8 font-weight-bold">{{user.address.pinCode}}</label>
+        <label class="control-label col-sm-3">Phone :</label><label class="col-sm-8 font-weight-bold">{{user.phone}}</label>      
+  </div>
+    <nav class="navbar navbar-light bg-light m-3">
+        <a [routerLink]="['edit']">Edit</a>
+    </nav>
+</div>
+
+<router-outlet></router-outlet>

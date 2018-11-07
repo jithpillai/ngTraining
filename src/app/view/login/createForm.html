@@ -1,0 +1,32 @@
+<div [style.background-color]="bgColor" [style.display]="'block'" class="m-3 card card-primary">
+  <div class="card-header h3">Create Form</div>
+  <form class="card-body m-2" #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" name="name" #nameField ngModel>
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="text" class="form-control" name="age" #ageField ngModel>
+    </div>
+    <div class="form-group">
+      <label for="userName">User Name</label>
+      <input type="text" class="form-control" name="userName" #userNameField ngModel>
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" name="pwd" #pwdField ngModel>
+    </div>
+    <div class="form-group">
+      <label for="nation">Nationality</label>
+      <input type="text" class="form-control" name="nation" #nationField ngModel>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" name="phone" #phoneField ngModel>
+    </div>
+    <div *ngIf="invalidForm" class="error m-2"><strong>{{validationMsg}}</strong></div>
+    <button type="submit" class="btn btn-primary m-2">Submit</button>
+    <button class="btn btn-secondary m-2" type="reset">Reset</button>
+  </form>
+</div>

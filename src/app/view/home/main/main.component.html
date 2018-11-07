@@ -1,0 +1,26 @@
+<div [style.background-color]="bgColor" class="m-3"> 
+
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Nationality</th>
+            <th scope="col">Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let user of availableUsers; let i = index" (click)="onRowSelect(user)">
+                <th scope="row">{{i+1}}</th>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.userName }}</td>
+                <td>{{ user.nation }}</td>
+                <td>{{ user.phone }}</td>
+              </tr>
+        </tbody>
+      
+    </table>
+    
+</div>
