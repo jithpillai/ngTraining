@@ -1,6 +1,6 @@
-<div [style.background-color]="bgColor" [style.display]="'grid'" class="m-3">
-  <form class="m-2">
-    <h3>Login</h3>
+<div [style.background-color]="bgColor" [style.display]="'grid'" class="m-3 card card-primary">
+  <div class="card-header h3">Login</div>
+  <form class="m-2 card-body">
     <div class="form-group">
       <label for="userName" >Username:</label>
       <input type="userName" [(ngModel)]="userName" class="form-control" name="userName" #userNameField (ngModelChange)="valuechange($event)">
@@ -24,8 +24,4 @@
     <button class="btn btn-danger m-2" (click)="registerUser(userNameField.value, pwdField.value)">Register</button>
     <button class="btn btn-secondary m-2"  type="reset">Reset</button>
   </form>
-</div>
-<div appChangeColor [style.background-color]="bgColor" [style.display]="'block'" class="m-3">
-  <label class="control-label col-sm-2">Name :</label><label  class="col-sm-10">{{userName | initcap}}</label>
-  <label class="control-label col-sm-2">Remember :</label><label  class="col-sm-10">{{remember}}</label>
 </div>

@@ -17,6 +17,8 @@ export class LoginComponent implements OnInit {
   cName = "";
   cAge = "";
   userName = "";
+  pwd = "";
+  remember = false;
   verifyText="Verify";
   validationMsg= "Invalid Username or Password";
   displayUsers = false;
@@ -73,7 +75,7 @@ export class LoginComponent implements OnInit {
       this.validationMsg = "User not Registered";
     }
   }
-  valuechange() {
+  valuechange(event) {
     this.displayUsers =  false;
     this.displayMsg =  false;
     this.verifyText = "Verify";

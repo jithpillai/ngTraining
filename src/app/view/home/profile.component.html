@@ -1,3 +1,5 @@
+<router-outlet></router-outlet>
+
 <div *ngIf="showDetails" appChangeColor [style.background-color]="bgColor" [style.display]="'block'" class="card card-primary m-3">
     <div class="card-header h3">User Info</div>
   <div class="card-body">
@@ -13,5 +15,3 @@
         <a [routerLink]="['edit']">Edit</a>
     </nav>
 </div>
-
-<router-outlet></router-outlet>

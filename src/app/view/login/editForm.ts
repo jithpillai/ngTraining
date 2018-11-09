@@ -8,6 +8,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms'
 export class EditFormComponent {
   bgColor= '#fff';
   userName="";
+  invalidForm=false;
   user={};
   detailsForm = new FormGroup({
       name: new FormControl('',[Validators.required, Validators.minLength(3)]),
@@ -17,8 +18,8 @@ export class EditFormComponent {
       pwd: new FormControl(),
       nation: new FormControl(),
       address: new FormGroup({
-          city: new FormControl(),
-          pinCode: new FormControl()
+          city: new FormControl(""),
+          pinCode: new FormControl("")
       })
   });
   constructor(private route: ActivatedRoute, private signing: SigningService, private router:Router) {}

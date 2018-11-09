@@ -7,6 +7,7 @@ import {SigningService} from './signing.service';
 })
 export class CreateFormComponent implements OnInit {
   bgColor= '#fff';
+  invalidForm=false;
   constructor(private signing: SigningService, private router: Router) {}
 
   ngOnInit() {
@@ -28,7 +29,7 @@ export class CreateFormComponent implements OnInit {
       alert("Username already Registered");
       return;
     }
-    value.address = {};
+    value.address = {city: "", pinCode: ""};
     this.signing.addUser(value);
     alert("User Registered Successfully");
     this.router.navigate(['/profile', value.userName]);

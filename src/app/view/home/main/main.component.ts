@@ -4,7 +4,6 @@ import {SigningService} from '../../login/signing.service';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css'],
   providers: [SigningService]
 })
 export class MainComponent implements OnInit {
